@@ -34,6 +34,7 @@ const GetAppointment = () => {
     setError("");
     setSuccess("");
     //Supabase e ekta form ache sekhane data inser koro.
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { data, error } = await supabase
       .from("appointments")
       .insert([{ name, email, mobile }]);
