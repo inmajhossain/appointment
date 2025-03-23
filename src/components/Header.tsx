@@ -2,6 +2,14 @@
 import React from "react";
 import Link from "next/link";
 import { ModeToggle } from "./ModeToggle";
+//For Clerk
+import {
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 
 export default function Header() {
   return (
@@ -31,11 +39,26 @@ export default function Header() {
               Book Now
             </button>
           </Link>
-          <Link href="/admin-database">
-            <button className="bg-indigo-600 px-[25px] py-[7px] rounded-br-2xl rounded-l-2xl border-white border-[1px]">
-              Admin Database
-            </button>
-          </Link>
+        </div>
+        {/* Clerk */}
+        <div className="flex justify-end items-center p-4 gap-4 h-16">
+          <SignedOut>
+            <Link
+              href={""}
+              className="bg-indigo-600 px-10 py-2 rounded-bl-2xl rounded-r-2xl border-white border-[1px]"
+            >
+              <SignInButton />
+            </Link>
+            <Link
+              href={""}
+              className="bg-indigo-600 px-10 py-2 rounded-br-2xl rounded-l-2xl border-white border-[1px]"
+            >
+              <SignUpButton />
+            </Link>
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
         </div>
         {/* Theme */}
 

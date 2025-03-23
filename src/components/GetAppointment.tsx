@@ -63,7 +63,10 @@ const GetAppointment = () => {
   };
 
   return (
-    <section id="get-appointment" className="p-4 w-[1280px] mx-auto mt-[50px]">
+    <section
+      id="get-appointment"
+      className="h-[100vh] p-4 w-[1280px] mx-auto mt-[50px]"
+    >
       <h2 className="text-center text-2xl font-bold mb-4">Get Appointment</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
