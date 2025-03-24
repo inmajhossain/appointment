@@ -67,7 +67,9 @@ const GetAppointment = () => {
       id="get-appointment"
       className="h-[100vh] p-4 w-[1280px] mx-auto mt-[50px]"
     >
-      <h2 className="text-center text-2xl font-bold mb-4">Get Appointment</h2>
+      <h2 className="roboto text-center text-2xl font-bold mb-4">
+        Get Appointment
+      </h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="name" className="block">

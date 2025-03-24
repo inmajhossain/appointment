@@ -29,7 +29,7 @@ const AdminAppointments = () => {
     if (error) {
       setError("Error fetching appointments.");
     } else {
-      setAppointments(data);
+      setAppointments(data || []);
     }
   };
   //website er delete button er maddhome supabase theke data delete korte hole ei function ta lagbe
