@@ -12,7 +12,7 @@ const supabaseKey =
 const supabase = createClient(supabaseUrl, supabaseKey);
 //admin ki edit kore set korbe ta define kore dite hobe
 const AdminAppointments = () => {
-  const [appointments, setAppointments] = useState([]);
+  const [appointments, setAppointments] = useState<any[]>([]);
   const [error, setError] = useState("");
   const [editingAppointment, setEditingAppointment] = useState(null);
   const [updatedData, setUpdatedData] = useState({
@@ -29,7 +29,7 @@ const AdminAppointments = () => {
     if (error) {
       setError("Error fetching appointments.");
     } else {
-      setAppointments(data || []);
+      setAppointments(data);
     }
   };
   //website er delete button er maddhome supabase theke data delete korte hole ei function ta lagbe
